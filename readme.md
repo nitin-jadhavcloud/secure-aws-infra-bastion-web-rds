@@ -193,7 +193,7 @@ This project demonstrates how to design and deploy a secure 3-tier architecture 
 
    ## RDS Dashboard
 
-   ![RDS Dashboard ](./Screenshot/RDS-Mydatabase-Dashboards.png)
+   ![RDS Dashboard ](./Screenshot/RDS-Mydatabase-Dashboard.png)
    
 
 
