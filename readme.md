@@ -39,7 +39,7 @@ This project demonstrates how to design and deploy a secure 3-tier architecture 
 ### 1️⃣ Create Custom VPC
 - CIDR block: `10.0.0.0/16`  
 - Name: `My-Custom-vpc`  
- [Custom vpc ](./Screenshot/VPC-Dashboard.png)
+ ![Custom vpc ](./Screenshot/VPC-Dashboard.png)
 
 ---
 
