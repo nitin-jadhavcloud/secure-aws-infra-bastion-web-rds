@@ -91,7 +91,7 @@ This project demonstrates how to design and deploy a secure 3-tier architecture 
 ### 5️⃣ Create Private Route Table
 - Name: `Private-RT`
 - Associate with: `PrivateSubnet1` and `PrivateSubnet2`  
-📸  [Pcreate Private RT ](./Screenshot/Create-PrivateRT.png)
+📸  ![Pcreate Private RT ](./Screenshot/Create-PrivateRT.png)
 
 ## Private subnets associate with privte RT
 
