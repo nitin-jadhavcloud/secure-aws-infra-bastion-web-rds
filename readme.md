@@ -1,12 +1,12 @@
 # 🧱 AWS 3-Tier Architecture with Bastion Host (Built Using AWS Console - No Terraform)
 
-## 👋 Introduction
+## 🎄 Introduction
 
 This project is a hands-on setup of a **secure 3-tier AWS infrastructure**, built **entirely using the AWS Management Console (GUI)** — no Terraform or automation tools were used.
 
 -
 
-## 🧠 Why I Built This
+##  Why I Built This
 
 I’m transitioning into cloud and DevOps roles from an IT support background. Instead of only learning theory or copying IaC code, I chose to build this architecture manually using the AWS console.  
 This helped me understand how networking and access control really work behind the scenes.
@@ -52,23 +52,23 @@ This project demonstrates how to design and deploy a secure 3-tier architecture 
 | PrivateSubnet1  | Private | us-east-2a   | 10.0.3.0/24   |
 | PrivateSubnet2  | Private | us-east-2b   | 10.0.4.0/24   |
 
-[Public Subnet1  ](./Screenshot/create-Publicsubnet1.png)
-[Public Subnet2  ](./Screenshot/Create-PublicSubnet2.png)
-[Private Subnet1 ](./Screenshot/Create-PrivateSubnet1.png)
+![Public Subnet1  ](./Screenshot/create-Publicsubnet1.png)
+![Public Subnet2  ](./Screenshot/Create-PublicSubnet2.png)
+![Private Subnet1 ](./Screenshot/Create-PrivateSubnet1.png)
 
-[Private Subnet2 ](./Screenshot/Create-privateSubnet2.png)
+![Private Subnet2 ](./Screenshot/Create-privateSubnet2.png)
 
-[Subnet  Dashboard ](./Screenshot/Subnet-Dashboard.png)
+![Subnet  Dashboard ](./Screenshot/Subnet-Dashboard.png)
 ---
 
 ### 3️⃣ Create and Attach Internet Gateway
 - Name: `My-IGW`  
 - Attach to VPC: `My-Custom-vpc`  
-📸 [IGW ](./Screenshot/Create-InternetGateway.png)
+📸 ![IGW ](./Screenshot/Create-InternetGateway.png)
 
- [IGW attach to vpc ](./Screenshot/IGW-attach-CustomVPC.png)
+ ![IGW attach to vpc ](./Screenshot/IGW-attach-CustomVPC.png)
 
-[IGW  Dashboard ](./Screenshot/IGW-Dashboard.png)
+![IGW  Dashboard ](./Screenshot/IGW-Dashboard.png)
 
 
 ---
@@ -78,11 +78,11 @@ This project demonstrates how to design and deploy a secure 3-tier architecture 
 - Add route: `0.0.0.0/0 → My-IGW`
 - Associate with: `PublicSubnet1` and `PublicSubnet2`  
 
-📸 [Public RT create ](./Screenshot/Public-RT.png)
+📸 ![Public RT create ](./Screenshot/Public-RT.png)
 
 ##  Public Subnet associate with public route Table 
 
-  [Public RT P-sub association ](./Screenshot/PublicSubnet1-2-PublicRT.png)
+  ![Public RT P-sub association ](./Screenshot/PublicSubnet1-2-PublicRT.png)
 
 
 ---
@@ -94,12 +94,12 @@ This project demonstrates how to design and deploy a secure 3-tier architecture 
 
 ## Private subnets associate with privte RT
 
- [Subnet associatin ](./Screenshot/PrivateSubnet1-2-with-RT.png)
+ ![Subnet associatin ](./Screenshot/PrivateSubnet1-2-with-RT.png)
 ---
 
 ### 6️⃣ Allocate Elastic IP
 - Name: `My-EIP`  
-📸  [Allocate EIP ](./Screenshot/Allocate-Elastic-IP.png)
+📸  ![Allocate EIP ](./Screenshot/Allocate-Elastic-IP.png)
 
 ---
 
@@ -107,9 +107,9 @@ This project demonstrates how to design and deploy a secure 3-tier architecture 
 - Name: `MyNATGW`
 - Attach to: `PublicSubnet1`
 - Elastic IP: `My-EIP`  
-📸 [create nat & associate EIP  ](./Screenshot/NAT-gateway.png)
+📸 ![create nat & associate EIP  ](./Screenshot/NAT-gateway.png)
 
-[NAT Dashbard](./Screenshot/NATGW-Dashboard.png)
+![NAT Dashbard](./Screenshot/NATGW-Dashboard.png)
 
 
 ---
@@ -117,7 +117,7 @@ This project demonstrates how to design and deploy a secure 3-tier architecture 
 ### 8️⃣ Update Private Route Table
 - Route: `0.0.0.0/0 → MyNATGW` in `Private-RT` 
 
- [create nat & associate EIP  ](./Screenshot/Add-NAT-private-RT.png)
+ ![create nat & associate EIP  ](./Screenshot/Add-NAT-private-RT.png)
 
 ---
 
@@ -126,23 +126,23 @@ This project demonstrates how to design and deploy a secure 3-tier architecture 
 **a. Bastion-SG**
 - Inbound: `SSH (22)` from `My IP`  
 - Outbound: All traffic  
-📸[Bastion SG ](./Screenshot/Bastion-SG.png)
+📸  ![Bastion SG ](./Screenshot/Bastion-SG.png)
 
 **b. Web-SG**
 - Inbound:
   - `HTTP (80)` from `0.0.0.0/0`
   - `SSH (22)` from `Bastion-SG` (via SG ID)
 - Outbound: All traffic  
-📸 [Web-SG ](./Screenshot/Web-SG.png)
+📸 ![Web-SG ](./Screenshot/Web-SG.png)
 
 
 **c. RDS-SG**
 - Inbound: `MySQL (3306)` from `Web-SG` (via SG ID)
 - Outbound: All traffic  
-📸  [RDS-SG ](./Screenshot/RDS-SG.png)
+📸  ![RDS-SG ](./Screenshot/RDS-SG.png)
 
 ** Security Group Dashboard 
- [Security-SG ](./Screenshot/Security-Group-Dashboard.png)
+ ![Security-SG ](./Screenshot/Security-Group-Dashboard.png)
 
 ---
 
@@ -153,7 +153,7 @@ This project demonstrates how to design and deploy a secure 3-tier architecture 
 - Subnet: `PublicSubnet1`
 - SG: `Bastion-SG`
 - Auto-assign public IP: ✅ Yes  
-📸 [BAstion EC2 ](./Screenshot/Bastion-EC2.png)
+📸 ![BAstion EC2 ](./Screenshot/Bastion-EC2.png)
 
 
 **b. Web Server**
@@ -161,16 +161,16 @@ This project demonstrates how to design and deploy a secure 3-tier architecture 
 - Subnet: `PrivateSubnet1`
 - SG: `Web-SG`
 - Auto-assign public IP: ❌ No  
-📸  [BAstion EC2 ](./Screenshot/Web-Server.png)
+📸  ![BAstion EC2 ](./Screenshot/Web-Server.png)
 
 ---
 
 ### 1️⃣1️⃣ Create RDS Subnet Group
 - Name: `MyRDSSubnetGroup`
 - Include: `PrivateSubnet1` and `PrivateSubnet2`  
-📸 [DB subnet creation  ](./Screenshot/Create-DB-SubnetGroup.png)
+📸 ![DB subnet creation  ](./Screenshot/Create-DB-SubnetGroup.png)
 
-[DB Subnet DASH ](./Screenshot/DBSubnetGroup-dashboard.png)
+![DB Subnet DASH ](./Screenshot/DBSubnetGroup-dashboard.png)
 
 ---
 
@@ -183,9 +183,9 @@ This project demonstrates how to design and deploy a secure 3-tier architecture 
 - Public access: ❌ No
 - Security Group: `RDS-SG`  
 
-📸 [BAstion EC2 ](./Screenshot/Creation-step-DB.png)
+📸 ![BAstion EC2 ](./Screenshot/Creation-step-DB.png)
 
-[BAstion EC2 ](./Screenshot/Creation-DB-steps.png)
+![BAstion EC2 ](./Screenshot/Creation-DB-steps.png)
 
 
 
