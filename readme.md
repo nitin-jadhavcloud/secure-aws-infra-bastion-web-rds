@@ -63,7 +63,8 @@ This project demonstrates how to design and deploy a secure 3-tier architecture 
 
 ### 3️⃣ Create and Attach Internet Gateway
 - Name: `My-IGW`  
-- Attach to VPC: `My-Custom-vpc`  
+- **Attach to VPC: `My-Custom-vpc**
+- 
 📸 ![IGW ](./Screenshot/Create-InternetGateway.png)
 
  ![IGW attach to vpc ](./Screenshot/IGW-attach-CustomVPC.png)
@@ -74,9 +75,9 @@ This project demonstrates how to design and deploy a secure 3-tier architecture 
 ---
 
 ### 4️⃣ Create Public Route Table
-- Name: `Public-RT`
+- **Name: `Public-RT`
 - Add route: `0.0.0.0/0 → My-IGW`
-- Associate with: `PublicSubnet1` and `PublicSubnet2`  
+- Associate with: `PublicSubnet1` and `PublicSubnet2`***  
 
 📸 ![Public RT create ](./Screenshot/Public-RT.png)
 
@@ -162,13 +163,15 @@ This project demonstrates how to design and deploy a secure 3-tier architecture 
 - Auto-assign public IP: ❌ No  
 
  💻**EC2 Dashboard**
+ 
  ![EC2-Dashboard  ](./Screenshot/EC2-Dashboard.png)
 
 ---
 
 ### 1️⃣1️⃣ Create RDS Subnet Group
 - Name: `MyRDSSubnetGroup`
-- Include: `PrivateSubnet1` and `PrivateSubnet2`  
+- Include: `PrivateSubnet1` and `PrivateSubnet2`
+- 
 📸 ![DB subnet creation  ](./Screenshot/Create-DB-SubnetGroup.png)
 
 ![DB Subnet DASH ](./Screenshot/DBSubnetGroup-dashboard.png)
@@ -187,6 +190,11 @@ This project demonstrates how to design and deploy a secure 3-tier architecture 
 📸 ![RDS database createtion ](./Screenshot/Creation-step-DB.png)
 
    ![BAstion EC2 ](./Screenshot/creation-DB-steps.png)
+
+   ## RDS Dashboard
+
+   ![RDS Dashboard ](./Screenshot/RDS-Mydatabase-Dshboards.png)
+   
 
 
 
