@@ -160,7 +160,9 @@ This project demonstrates how to design and deploy a secure 3-tier architecture 
 - Subnet: `PrivateSubnet1`
 - SG: `Web-SG`
 - Auto-assign public IP: ❌ No  
-📸  ![BAstion EC2 ](./Screenshot/Web-Server.png)
+
+ 💻**EC2 Dashboard**
+ ![EC2-Dashboard  ](./Screenshot/EC2-Dashboard.png)
 
 ---
 
@@ -182,9 +184,9 @@ This project demonstrates how to design and deploy a secure 3-tier architecture 
 - Public access: ❌ No
 - Security Group: `RDS-SG`  
 
-📸 ![BAstion EC2 ](./Screenshot/Creation-step-DB.png)
+📸 ![RDS database createtion ](./Screenshot/Creation-step-DB.png)
 
-![BAstion EC2 ](./Screenshot/Creation-DB-steps.png)
+   ![BAstion EC2 ](./Screenshot/creation-DB-steps.png)
 
 
 
