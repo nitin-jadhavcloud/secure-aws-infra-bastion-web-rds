@@ -189,11 +189,11 @@ This project demonstrates how to design and deploy a secure 3-tier architecture 
 
 📸 ![RDS database createtion ](./Screenshot/Creation-step-DB.png)
 
-   ![BAstion EC2 ](./Screenshot/creation-DB-steps.png)
+   ![DB creation ](./Screenshot/creation-DB-steps.png)
 
    ## RDS Dashboard
 
-   ![RDS Dashboard ](./Screenshot/RDS-Mydatabase-Dshboards.png)
+   ![RDS Dashboard ](./Screenshot/RDS-Mydatabase-Dashboards.png)
    
 
 
@@ -201,4 +201,7 @@ This project demonstrates how to design and deploy a secure 3-tier architecture 
 
 ---
 
-## ✅ Project Completed.
+## ✅ Project End
+
+project By Nitin Jadhav
+
