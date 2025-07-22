@@ -117,8 +117,7 @@ This project demonstrates how to design and deploy a secure 3-tier architecture 
 ### 8️⃣ Update Private Route Table
 - Route: `0.0.0.0/0 → MyNATGW` in `Private-RT` 
 
- ![create nat & associate EIP  ](./Screenshot/Add-NAT-private-RT.png)
-
+ ![Update NAT in P-RT](./Screenshot/Add-NAT-Private-RT.png)
 ---
 
 ### 9️⃣ Create Security Groups
