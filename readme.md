@@ -109,7 +109,7 @@ This project demonstrates how to design and deploy a secure 3-tier architecture 
 - Elastic IP: `My-EIP`  
 📸 ![create nat & associate EIP  ](./Screenshot/NAT-gateway.png)
 
-![NAT Dashbard](./Screenshot/NATGW-Dashboard.png)
+![NAT Dashbard](./Screenshot/NatGW-Dashboard.png)
 
 
 ---
